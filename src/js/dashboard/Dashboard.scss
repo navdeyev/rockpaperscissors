@@ -1,0 +1,73 @@
+.main {
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+
+  .container {
+
+	.comment {
+	  font-size: 18px;
+	  padding: 20px 0 0 0;
+	  text-align: center;
+	}
+
+	.content {
+	  overflow: hidden;
+
+	  .left {
+		width: 50%;
+		float: left;
+		padding: 20px 0;
+		text-align: center;
+
+		@media (max-width: 650px) {
+		  width: 100%;
+		  float: none;
+		}
+	  }
+
+	  .right {
+		width: 50%;
+		float: right;
+		padding: 20px 0;
+		text-align: center;
+
+		@media (max-width: 650px) {
+		  width: 100%;
+		  float: none;
+		}
+	  }
+
+	  .player {
+		margin: 0 auto;
+		padding: 20px 0;
+		border-radius: 6px;
+		display: inline-block;
+		border: 1px solid #666;
+
+		&.win {
+		  background-color: #72d572;
+		}
+
+		.playerName {
+		  text-decoration: underline;
+		  padding: 0 0 20px 0;
+		}
+	  }
+	}
+  }
+
+  .actions {
+	padding-top: 20px;
+	text-align: center;
+
+	.btn {
+	  padding: 10px;
+	  margin: 0 10px;
+	  font-size: 16px;
+	  border-radius: 6px;
+	  border: 1px solid #333;
+	}
+  }
+
+}

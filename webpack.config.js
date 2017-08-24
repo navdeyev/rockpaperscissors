@@ -61,9 +61,28 @@ module.exports = {
 				use: ['css-loader', 'sass-loader']
 			})
 		},{
+			test: /\.png$/,
+			exclude: [/node_modules/],
+			use: [
+				'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+				'image-webpack-loader?bypassOnDebug'
+				]
+		},{
 			test: /\.js$/,
 			exclude: [/node_modules/],
-			use: 'babel-loader'
+			use: {
+				loader: 'babel-loader',
+				query: {
+					presets: ['airbnb']
+				}
+			}
 		}]
+	},
+	externals: {
+		cheerio: 'window',
+		'react/addons': true,
+		'react/lib/ExecutionEnvironment': true,
+		'react/lib/ReactContext': true,
+		'react-addons-test-utils': 'react-dom',
 	}
 };

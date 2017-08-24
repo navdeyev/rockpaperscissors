@@ -1,5 +1,18 @@
-require('../css/main.scss');
+import React from 'react';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import gameReducers from './dashboard/dashboardReducers';
+import {devToolsEnhancer} from 'redux-devtools-extension';
 
-import print from './module';
+import Dashboard from './dashboard/Dashboard';
+import '../css/main.scss';
 
-print('it works well!');
+let store = createStore(gameReducers, devToolsEnhancer());
+render(
+	<Provider store={store}>
+		<Dashboard/>
+	</Provider>,
+	document.getElementById('app')
+);
+

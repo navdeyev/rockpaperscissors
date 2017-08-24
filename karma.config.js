@@ -2,14 +2,14 @@
 
 // Karma configuration
 
-const WebpackKarmaWarningsPlugin = require('./webpack-karma-warnings-plugin');
+// const WebpackKarmaWarningsPlugin = require('./webpack-karma-warnings-plugin');
 const webpackConfig = require('./webpack.config');
 
 module.exports = function (config) {
 
 	webpackConfig.devtool = 'inline-source-map';
 	delete webpackConfig.entry;
-	webpackConfig.plugins = [new WebpackKarmaWarningsPlugin()];
+	// webpackConfig.plugins = [new WebpackKarmaWarningsPlugin()];
 
 	config.set({
 		// base path that will be used to resolve all patterns (eg. files, exclude)

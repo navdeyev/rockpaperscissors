@@ -1,0 +1,45 @@
+.iconPanel {
+  height: 60px;
+  min-width: 300px;
+  line-height: 60px;
+
+  .icon {
+	width: 40px;
+	height: 40px;
+	margin: 0 5px;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+
+	background-size: 40px 40px;
+
+	&.rock {
+	  background-image: url('../../assets/rock.png');
+	}
+	&.paper {
+	  background-image: url('../../assets/paper.png');
+	}
+	&.scissors {
+	  background-image: url('../../assets/scissors.png');
+	}
+	&.lizard {
+	  background-image: url('../../assets/lizard.png');
+	}
+	&.spock {
+	  background-image: url('../../assets/spock.png');
+	}
+
+	&.selected {
+	  width: 60px;
+	  height: 60px;
+	  background-size: cover;
+	}
+  }
+
+  &.disabled {
+	.icon {
+	  cursor: default;
+	}
+  }
+
+}
